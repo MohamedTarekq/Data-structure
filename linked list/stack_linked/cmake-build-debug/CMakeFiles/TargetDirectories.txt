@@ -1,3 +1,0 @@
-/home/tarek/CLionProjects/stack_linked/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tarek/CLionProjects/stack_linked/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tarek/CLionProjects/stack_linked/cmake-build-debug/CMakeFiles/stack_linked.dir
