@@ -52,6 +52,14 @@ node * Append(node *head,int data){
     }
     return head;
 }
+node * appendFirst(node *head,int data){
+   node *newNode = (node *) malloc(sizeof(node));
+   newNode->data=data;
+   newNode->next=head;
+   head = newNode;
+   return head;
+
+}
 void printNodes(node *p){
     while (p != NULL){
         printf("%d\n",p->data);
@@ -62,9 +70,13 @@ int main() {
     printf("Hello, World!\n");
 
     node *head = NULL;
+    
     head = Append(head,11);
     Append(head,22);
     Append(head,33);
+    
+    // add 55 to the first list
+    head = appendFirst(head,55);
     printNodes(head);
     return 0;
 }
