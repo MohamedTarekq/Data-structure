@@ -70,14 +70,10 @@ void printNodes(node *p){
 int main() {
     printf("Hello, World!\n");
     node *head = NULL ;
-//     node *newNode;
-//     node *temp;
-
     head = Append(head,55);
     Append(head,77);
     Append(head,110);
-    temp = head;
-    printNodes(temp);
+    printNodes(head);
 
     return 0;
 }
