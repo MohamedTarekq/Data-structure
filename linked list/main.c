@@ -38,42 +38,33 @@ node * DeleteFirstNode(node *head){
        return secondNode;
    }
 }
+node * Append(node *head,int data){
 
-node * Append(node *head, int data){
-    node *newNode;
+    node *newNode,*temp;
     newNode = (node *) malloc(sizeof(node));
     newNode->data = data;
     newNode->next = NULL;
-
-    if ( head !=NULL){
-        node *temp = head;
-        while (temp->next != NULL){
-            temp = temp->next;
-        }
-        temp->next=newNode;
-        newNode->next=NULL;
-    }else{
-        head = newNode;
+    if (head == NULL) {
+        head = temp = newNode;
+    } else {
+        temp->next = newNode;
+        head = temp = newNode;
     }
-    return newNode;
+    return head;
 }
-
 void printNodes(node *p){
     while (p != NULL){
         printf("%d\n",p->data);
         p = p->next;
-        int a;
     }
 }
-
-
 int main() {
     printf("Hello, World!\n");
-    node *head = NULL ;
-    head = Append(head,55);
-    Append(head,77);
-    Append(head,110);
-    printNodes(head);
 
+    node *head = NULL;
+    head = Append(head,11);
+    Append(head,22);
+    Append(head,33);
+    printNodes(head);
     return 0;
 }
