@@ -50,21 +50,22 @@ void display(Stack *pt){
 
 int main() {
     printf("Hello, World!\n");
-    Stack stack;
-    Stack *pt_satck;
-    pt_satck = &stack;
+    Stack s;
+    initStack(&s);
 
-    initStack(pt_satck);
+    push(1,&s);
+    push(2,&s);
+    push(3,&s);
+    push(4,&s);
+    printf("Display all elements of stack\n");
+    display(&s);
 
-    push(55,pt_satck);
-    push(24,pt_satck);
-    push(37,pt_satck);
-    push(42,pt_satck);
+    printf("================================\n");
+    printf("================================\n");
 
-    type last = pop(pt_satck);
-
-    display(pt_satck);
-    printf("%d\n",last);
+    int last = pop(&s);
+    printf("last input to stack: %d\n",last);
+    display(&s);
 
     return 0;
 }
